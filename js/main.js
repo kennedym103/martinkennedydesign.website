@@ -4,6 +4,27 @@ $(document).ready(function () {
    $('#nav').onePageNav();
 });
 
+/// downward scrolling for animated hero button ///
+setTimeout(function(){
+    $('.trans--grow').addClass('grow');
+}, 275);
+setTimeout(function(){
+    $('.nav-item-visibilty').addClass('nav-opacity');
+}, 275);
+
+
+
+$("#jumpButton").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#scrollDown").offset().top
+    }, 1000);
+});
+
+
+// nav-menu, line grow ///
+
+
+
 ///nav-menu hide, and reappear ///
 
 $(document).ready(function () {
@@ -62,7 +83,7 @@ $(window).resize(function () {
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
-    if (scroll >= 700) {
+    if (scroll >= 550) {
         $(".print-svg").addClass("path");
     } else {
         $(".print-svg").removeClass("path");

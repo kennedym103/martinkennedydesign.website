@@ -63,12 +63,47 @@ h4 {
   padding: 10px;
 }
 
+.top-line {
+  margin-bottom: 10px;
+}
+
 .text-center {
   text-align: center;
 }
 
 .p-top {
   padding-top: 6rem;
+}
+
+.nav-line {
+  display: inline-block;
+  border-top: 2px solid #8f7c4f;
+}
+
+.trans--grow {
+  position: absolute;
+  bottom: 90;
+  right: 0;
+  transition: all 1.25s ease-out;
+  width: 0%;
+  opacity: 0;
+}
+
+.grow {
+  z-index: 0;
+  width: calc(100% - 560px);
+  opacity: .75;
+}
+
+.nav-item-visibilty {
+  transition: opacity 1.25s ease-out, transform 1.25s ease-out;
+  opacity: 0;
+  transform: rotateX(90deg);
+}
+
+.nav-opacity {
+  opacity: 1;
+  transform: rotateX(0deg);
 }
 
 .nav-text a {
@@ -102,6 +137,10 @@ h4 {
   border-radius: 0;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   width: 100%;
+}
+
+.bg-nav .nav-line {
+  display: none;
 }
 
 .bg-nav .nav-text a {
@@ -195,10 +234,18 @@ h4 {
 .down-arrow {
   position: relative;
   top: 170px;
-  margin-left: calc(50% - 25px);
+  margin-left: calc(50% - 53px);
   z-index: 250;
   opacity: 0.5;
   width: auto;
+}
+
+#jumpButton {
+  padding: 20px;
+}
+
+#jumpButton:hover {
+  cursor: pointer;
 }
 
 section {
@@ -568,6 +615,46 @@ section {
   transition: 400ms;
 }
 
+.gargas-img-bg::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.c5:hover .btn-view,
+.c5:focus .btn-view {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.c5:hover .gargas-img-bg:before,
+.c5:focus .gargas-img-bg:before {
+  display: block;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.c5:hover .gargas-img-bg,
+.c5:focus .gargas-img-bg {
+  transform: scale(1.2);
+}
+
+.gargas-img-bg {
+  background-image: url("../img/gargas-website.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  transition: 400ms;
+}
+
 #about {
   padding-bottom: 35px;
   min-height: 726px;
@@ -887,6 +974,14 @@ select:-webkit-autofil {
   font-size: 20px;
 }
 
+.gallery-modal .modal-header .modal-text em {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  color: #8f7c4f;
+  font-style: italic;
+  font-size: 19.5px;
+}
+
 .gallery-modal .modal-header .modal-text span {
   font-family: 'Raleway', sans-serif;
   font-weight: 100;
@@ -1012,6 +1107,9 @@ select:-webkit-autofil {
 }
 
 @media (max-width: 768px) {
+  .nav-line {
+    display: none;
+  }
   #contact {
     padding-left: 0;
     padding-right: 0;

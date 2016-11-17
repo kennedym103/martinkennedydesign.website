@@ -32,7 +32,7 @@
 
       <!------ Nav Bar ------>
 
-      <nav id="nav" class="navbar navbar-top-fixed nav-wrapper pt-1 bg-none pl-3">
+      <nav  class="navbar navbar-top-fixed nav-wrapper pt-1 bg-none pl-3">
 
          <label class="menu-icon">
             <a id="nav-toggle">
@@ -40,10 +40,11 @@
             </a>
          </label>
 
-         <ul class="nav navbar-nav">
+         <ul id="nav" class="nav navbar-nav nav-item-visibilty">
             <li class="nav-item  nav-text">
 					<a class="nav-link" href="#home"> <span class="sr-only">(current)</span><img src="img/brand-mark.png"></a>
 				 </li>
+
             <li class="nav-item nav-text">
  					<a class="nav-link" href="#print">PRINT</a>
  				</li>
@@ -53,6 +54,7 @@
             <li class="nav-item nav-text">
  					<a class="nav-link" href="#web">WEB</a>
  				</li>
+
             <li class="nav-item nav-text">
 					<a class="nav-link" href="#about">ABOUT</a>
 				 </li>
@@ -60,6 +62,7 @@
 			 	 	<a class="nav-link" href="#contact">CONTACT</a>
 		  		</li>
          </ul>
+         <hr class="line nav-line trans--grow"></hr>
       </nav>
 
 
@@ -73,7 +76,10 @@
             </div>
             <div class="col-sm-12 col-md-8 px-2">
                <img src="img/call-to-action.png" class="img-fluid" alt="call to action header"></img>
-               <img src="img/down-arrow.png" class=" img-fluid down-arrow animated infinite bounce"></img>
+               <a id="jumpButton">
+                  <img src="img/down-arrow.png" class=" img-fluid down-arrow animated infinite bounce"></img>
+               </a>
+
             </div>
             <div class="col-sm-2">
 
@@ -89,17 +95,17 @@
 
    <!-- Site Body -->
 
-   <section class="container-fluid bg-1 headline-copy">
+   <section id="scrollDown" class="container-fluid bg-1 headline-copy">
       <div class="row  p-top">
          <div class="col-sm-2 text-center">
 
          </div>
          <div class="col-sm-8 text-center">
-            <hr class="thick-line">
-            <h1 class="copy-primary">THIS IS A HEADLINE</h1>
-            <h1 class="copy-primary">THIS IS A HEADLINE</h1>
-            <h1 class="copy-primary">THIS IS A HEADLINE</h1>
-            <h1 class="copy-primary">THIS IS A HEADLINE</h1>
+            <hr class="thick-line top-line">
+            <h1 class="copy-primary">ENGAGING DESIGN</h1>
+            <h1 class="copy-primary">CREATIVE SOLUTIONS</h1>
+            <h1 class="copy-primary">STRATEGIC BRANDING</h1>
+            <h1 class="copy-primary">UNIQUE UI</h1>
             <hr class="thick-line">
          </div>
          <div class="col-sm-2 text-center">
@@ -128,7 +134,7 @@
                </svg>
             <h4 class="copy-primary">PRINT</h4>
             <hr class="line">
-            <p class="pt-2 copy-secondary">This is some custom copy that is going to give you a snippet of information about my who I am, what drives me, the skillset I bring to the table, and a little about the work that I do.</p>
+            <p class="pt-2 copy-secondary">From strategy and initial mockups through print production, I have experience designing and managing all aspects of the print process. </p>
          </div>
          <div class="col-sm-4 text-center px">
             <?xml version="1.0" encoding="utf-8"?>
@@ -291,8 +297,8 @@
          </div>
       </div>
 
-      <div class="c5" href="#" data-toggle="modal" data-target="#lightbox4">
-         <div class="hoppy-holidays-bg">
+      <div class="c5" href="#" data-toggle="modal" data-target="#lightbox-web-4">
+         <div class="gargas-img-bg">
             <div class="btn-view">
                VIEW
             </div>
@@ -562,7 +568,7 @@
                      <span aria-hidden="true">&times;</span>
                   </button>
                   <div class="modal-text">
-                     A3 TOWER BRANDING  <span>completed in <b>2014</b></span>
+                     A3 TOWER <em>BRANDING</em>  <span>completed in <b>2014</b></span>
                   </div>
                </div>
             </div>
@@ -584,15 +590,28 @@
 
    <div id="lightbox2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
-         <div class="modal-content">
-            <div class="modal-header">
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-               </button>
-
+         <div class="modal-content gallery-modal">
+            <div class="modal-header ">
+               <div class="modal-border">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+                  <div class="modal-text">
+                     CANNABIS CONFECTIONS <em>LOGO & PACKAGE DESIGN</em>  <span>completed in <b>2015</b></span>
+                  </div>
+               </div>
             </div>
             <div class="modal-body">
-               <img class="img-fluid" src="img/evrGroPro-package.jpg" alt="" />
+               <div class="modal-border">
+                  <img class="img-fluid" src="img/evrGroPro-package.jpg" alt="" />
+               </div>
+            </div>
+            <div class="modal-footer">
+               <div class="modal-border">
+                  <div class="modal-text-footer">
+                     A3 Tower wanted to update the appearance of there company with an engaging rebranding. Starting with the Allen family crest as a base for the logo we began to graphically simplify the image. International orange was used for the color palette do to the association with the communication tower industry.  The result  is the creation of a visually impactful logo and full array of business marketing collateral that gives A3 Tower a competitive edge.
+                  </div>
+               </div>
             </div>
          </div>
       </div>
@@ -601,15 +620,28 @@
    <div id="lightbox3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
 
-         <div class="modal-content">
-            <div class="modal-header">
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-               </button>
-
+         <div class="modal-content gallery-modal">
+            <div class="modal-header ">
+               <div class="modal-border">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+                  <div class="modal-text">
+                     A3 TOWER <em>BRANDING</em>  <span>completed in <b>2014</b></span>
+                  </div>
+               </div>
             </div>
             <div class="modal-body">
-               <img class="img-fluid" src="img/gro-pro-label.jpg" alt="" />
+               <div class="modal-border">
+                  <img class="img-fluid" src="img/gro-pro-label.jpg" alt="" />
+               </div>
+            </div>
+            <div class="modal-footer">
+               <div class="modal-border">
+                  <div class="modal-text-footer">
+                     A3 Tower wanted to update the appearance of there company with an engaging rebranding. Starting with the Allen family crest as a base for the logo we began to graphically simplify the image. International orange was used for the color palette do to the association with the communication tower industry.  The result  is the creation of a visually impactful logo and full array of business marketing collateral that gives A3 Tower a competitive edge.
+                  </div>
+               </div>
             </div>
          </div>
       </div>
@@ -617,15 +649,28 @@
 
    <div id="lightbox4" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
-         <div class="modal-content">
-            <div class="modal-header">
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-               </button>
-
+         <div class="modal-content gallery-modal">
+            <div class="modal-header ">
+               <div class="modal-border">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+                  <div class="modal-text">
+                     A3 TOWER <em>BRANDING</em>  <span>completed in <b>2014</b></span>
+                  </div>
+               </div>
             </div>
             <div class="modal-body">
-               <img class="img-fluid" src="img/hoppy-holidays.jpg" alt="" />
+               <div class="modal-border">
+                  <img class="img-fluid" src="img/hoppy-holidays.jpg" alt="" />
+               </div>
+            </div>
+            <div class="modal-footer">
+               <div class="modal-border">
+                  <div class="modal-text-footer">
+                     A3 Tower wanted to update the appearance of there company with an engaging rebranding. Starting with the Allen family crest as a base for the logo we began to graphically simplify the image. International orange was used for the color palette do to the association with the communication tower industry.  The result  is the creation of a visually impactful logo and full array of business marketing collateral that gives A3 Tower a competitive edge.
+                  </div>
+               </div>
             </div>
          </div>
       </div>
@@ -633,16 +678,30 @@
 
    <div id="lightbox-web-1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
-         <div class="modal-content">
-            <div class="modal-header">
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-               </button>
-
+         <div class="modal-content gallery-modal">
+            <div class="modal-header ">
+               <div class="modal-border">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+                  <div class="modal-text">
+                     RDG CONSTRUCTION<em> WEBSITE DESIGN</em>  <span>completed in <b>2016</b></span>
+                  </div>
+               </div>
             </div>
             <div class="modal-body">
-               <img class="img-fluid" src="img/rdg-website.jpg" alt="" />
+               <div class="modal-border">
+                  <img class="img-fluid" src="img/rdg-website.jpg" alt="" />
+               </div>
             </div>
+            <div class="modal-footer">
+               <div class="modal-border">
+                  <div class="modal-text-footer">
+                     A3 Tower wanted to update the appearance of there company with an engaging rebranding. Starting with the Allen family crest as a base for the logo we began to graphically simplify the image. International orange was used for the color palette do to the association with the communication tower industry.  The result  is the creation of a visually impactful logo and full array of business marketing collateral that gives A3 Tower a competitive edge.
+                  </div>
+               </div>
+            </div>
+
          </div>
       </div>
    </div>
@@ -676,6 +735,36 @@
             <div class="modal-body">
                <img class="img-fluid" src="img/stavros-mobile-website.jpg" alt="" />
             </div>
+         </div>
+      </div>
+   </div>
+
+   <div id="lightbox-web-4" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+         <div class="modal-content gallery-modal">
+            <div class="modal-header ">
+               <div class="modal-border">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+                  <div class="modal-text">
+                     RDG CONSTRUCTION<em> WEBSITE DESIGN</em>  <span>completed in <b>2016</b></span>
+                  </div>
+               </div>
+            </div>
+            <div class="modal-body">
+               <div class="modal-border">
+                  <img class="img-fluid" src="img/gargas-website.jpg" alt="" />
+               </div>
+            </div>
+            <div class="modal-footer">
+               <div class="modal-border">
+                  <div class="modal-text-footer">
+                     A3 Tower wanted to update the appearance of there company with an engaging rebranding. Starting with the Allen family crest as a base for the logo we began to graphically simplify the image. International orange was used for the color palette do to the association with the communication tower industry.  The result  is the creation of a visually impactful logo and full array of business marketing collateral that gives A3 Tower a competitive edge.
+                  </div>
+               </div>
+            </div>
+
          </div>
       </div>
    </div>
