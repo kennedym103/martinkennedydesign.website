@@ -85,14 +85,14 @@ h4 {
   bottom: 90;
   right: 0;
   transition: all 1.25s ease-out;
-  width: 0%;
+  width: 0;
   opacity: 0;
 }
 
 .grow {
   z-index: 0;
   width: calc(100% - 560px);
-  opacity: .75;
+  opacity: 0.75;
 }
 
 .nav-item-visibilty {
@@ -295,7 +295,6 @@ section {
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
   height: 1600px;
-  border-bottom: 10px solid #8f7c4f;
 }
 
 .c3,
@@ -315,6 +314,21 @@ section {
 .c3,
 .c4,
 .c5 {
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  opacity: 1;
+}
+
+.d3,
+.d4 {
+  width: 100%;
+  border-top: 10px solid #8f7c4f;
+}
+
+.d3,
+.d4 {
   cursor: pointer;
   overflow: hidden;
   position: relative;
@@ -342,7 +356,7 @@ section {
   position: absolute;
   border: 2px solid #dad6cc;
   opacity: 0;
-  transition: .5s;
+  transition: 0.5s;
   top: calc(50% - 30px);
   left: calc(50% - 75px);
 }
@@ -488,6 +502,95 @@ section {
 
 .hoppy-holidays-bg {
   background-image: url("../img/hoppy-holidays.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  transition: 400ms;
+}
+
+.inspiration-img-bg::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.c2:hover .btn-view,
+.c2:focus .btn-view {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.c2:hover .inspiration-img-bg:before,
+.c2:focus .inspiration-img-bg:before {
+  display: block;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.c2:hover .inspiration-img-bg,
+.c2:focus .inspiration-img-bg {
+  transform: scale(1.2);
+}
+
+.inspiration-img-bg {
+  background-image: url("../img/inspiration.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  transition: 400ms;
+}
+
+.mouse-img-bg::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.d3:hover .btn-view,
+.d3:focus .btn-view {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.d3:hover .mouse-img-bg:before,
+.d3:focus .mouse-img-bg:before {
+  display: block;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.d3:hover .mouse-img-bg,
+.d3:focus .mouse-img-bg {
+  transform: scale(1.2);
+}
+
+.mouse-img-bg {
+  background-image: url("../img/mouse.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  transition: 400ms;
+}
+
+.salesman-img-bg {
+  background-image: url("../img/sale.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -656,6 +759,7 @@ section {
 }
 
 #about {
+  border-top: 10px solid #8f7c4f;
   padding-bottom: 35px;
   min-height: 726px;
 }
@@ -947,13 +1051,13 @@ select:-webkit-autofil {
 
 .gallery-modal .modal-header {
   border: none;
-  padding-bottom: 0px;
+  padding-bottom: 0;
 }
 
 .gallery-modal .modal-header .close {
   color: #8f7c4f;
-  opacity: .5;
-  transition: .4s;
+  opacity: 0.5;
+  transition: 0.4s;
   text-shadow: none;
 }
 
@@ -991,23 +1095,23 @@ select:-webkit-autofil {
 }
 
 .gallery-modal .modal-body {
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .gallery-modal .modal-body .modal-border {
   border: 3px solid #8f7c4f;
-  border-top: 0px;
+  border-top: 0;
 }
 
 .gallery-modal .modal-footer {
-  padding-top: 0px;
+  padding-top: 0;
   border: none;
 }
 
 .gallery-modal .modal-footer .modal-border {
   border: 3px solid #8f7c4f;
-  border-top: 0px;
+  border-top: 0;
   padding: 1rem;
 }
 
@@ -1033,6 +1137,14 @@ select:-webkit-autofil {
 }
 
 @media (min-width: 600px) {
+  .d3 {
+    width: 50%;
+    border-top: 10px solid #8f7c4f;
+  }
+  .d4 {
+    width: 100%;
+    border-top: 10px solid #8f7c4f;
+  }
   .column-fluid-container {
     height: 1200px;
   }
@@ -1052,6 +1164,15 @@ select:-webkit-autofil {
 }
 
 @media (min-width: 768px) {
+  .d3 {
+    width: 50%;
+    border-top: 10px solid #8f7c4f;
+    border-right: 10px solid #8f7c4f;
+  }
+  .d4 {
+    width: 50%;
+    border-top: 10px solid #8f7c4f;
+  }
   .column-fluid-container {
     width: 100%;
     margin-left: auto;

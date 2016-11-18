@@ -7,8 +7,6 @@ $(document).ready(function () {
 /// downward scrolling for animated hero button ///
 setTimeout(function(){
     $('.trans--grow').addClass('grow');
-}, 275);
-setTimeout(function(){
     $('.nav-item-visibilty').addClass('nav-opacity');
 }, 275);
 

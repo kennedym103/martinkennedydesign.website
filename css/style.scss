@@ -77,32 +77,28 @@ h4 {
 }
 
 ///// Navigation Styles ////////
-
-
 .nav-line {
    display: inline-block;
    border-top: 2px solid #8f7c4f;
-
 }
 
-.trans--grow{
+.trans--grow {
    position: absolute;
    bottom: 90;
    right: 0;
-   transition: all 1.25s  ease-out;
-    width : 0%;
-    opacity: 0;
-
+   transition: all 1.25s ease-out;
+   width: 0;
+   opacity: 0;
 }
 
-.grow{
+.grow {
    z-index: 0;
-    width: calc(100% - 560px);
-    opacity: .75;
+   width: calc(100% - 560px);
+   opacity: 0.75;
 }
 
 .nav-item-visibilty {
-   transition: opacity 1.25s  ease-out, transform 1.25s ease-out;
+   transition: opacity 1.25s ease-out, transform 1.25s ease-out;
    opacity: 0;
    transform: rotateX(90deg);
 }
@@ -111,7 +107,6 @@ h4 {
    opacity: 1;
    transform: rotateX(0deg);
 }
-
 
 .nav-text {
    a {
@@ -259,6 +254,7 @@ h4 {
 
 #jumpButton {
    padding: 20px;
+
    &:hover {
       cursor: pointer;
    }
@@ -326,7 +322,6 @@ section {
    -webkit-flex-flow: row wrap;
    flex-flow: row wrap;
    height: 1600px;
-   border-bottom: 10px solid #8f7c4f;
 }
 
 .c3,
@@ -353,8 +348,24 @@ section {
    opacity: 1;
 }
 
-// a3 image ////
+////// Column Drop 4 images //////////
+.d3,
+.d4,
+ {
+   width: 100%;
+   border-top: 10px solid #8f7c4f;
+}
 
+.d3,
+.d4 {
+   cursor: pointer;
+   overflow: hidden;
+   position: relative;
+   display: block;
+   opacity: 1;
+}
+
+// a3 image ////
 .a3-img-bg::before {
    content: "";
    display: block;
@@ -369,24 +380,22 @@ section {
 }
 
 .btn-view {
-  color: #dad6cc; /* Good thing we set a fallback color! */
-  padding: 15px 50px;
-  position: absolute;
-  border: 2px solid #dad6cc;
-  opacity: 0;
-  transition: .5s;
-  top: calc(50% - 30px);
-  left: calc(50% - 75px);
+   color: #dad6cc;
+   /* Good thing we set a fallback color! */
+   padding: 15px 50px;
+   position: absolute;
+   border: 2px solid #dad6cc;
+   opacity: 0;
+   transition: 0.5s;
+   top: calc(50% - 30px);
+   left: calc(50% - 75px);
 }
 
 .c2:hover .btn-view,
 .c2:focus .btn-view {
-  opacity: 1;
-  cursor: pointer;
-
+   opacity: 1;
+   cursor: pointer;
 }
-
-
 
 .c2:hover .a3-img-bg:before,
 .c2:focus .a3-img-bg:before {
@@ -408,12 +417,9 @@ section {
    height: 100%;
    width: 100%;
    transition: all 0.5s;
-
-
 }
 
 // gropro image ////
-
 .gropro-img-bg::before {
    content: "";
    display: block;
@@ -427,15 +433,11 @@ section {
    transition: 0.5s;
 }
 
-
 .c3:hover .btn-view,
 .c3:focus .btn-view {
-  opacity: 1;
-  cursor: pointer;
-
+   opacity: 1;
+   cursor: pointer;
 }
-
-
 
 .c3:hover .gropro-img-bg:before,
 .c3:focus .gropro-img-bg:before {
@@ -458,12 +460,7 @@ section {
    transition: 400ms;
 }
 
-
-
-
 // gropro label image ////
-
-
 .gropro-label-img-bg::before {
    content: "";
    display: block;
@@ -477,15 +474,11 @@ section {
    transition: 0.5s;
 }
 
-
 .c4:hover .btn-view,
 .c4:focus .btn-view {
-  opacity: 1;
-  cursor: pointer;
-
+   opacity: 1;
+   cursor: pointer;
 }
-
-
 
 .c4:hover .gropro-label-img-bg:before,
 .c4:focus .gropro-label-img-bg:before {
@@ -508,10 +501,7 @@ section {
    transition: 400ms;
 }
 
-
-
 // hoppy holidays image ////
-
 .hoppy-holidays-bg::before {
    content: "";
    display: block;
@@ -525,15 +515,11 @@ section {
    transition: 0.5s;
 }
 
-
 .c5:hover .btn-view,
 .c5:focus .btn-view {
-  opacity: 1;
-  cursor: pointer;
-
+   opacity: 1;
+   cursor: pointer;
 }
-
-
 
 .c5:hover .hoppy-holidays-bg:before,
 .c5:focus .hoppy-holidays-bg:before {
@@ -556,11 +542,100 @@ section {
    transition: 400ms;
 }
 
+// inspiration image ////
+.inspiration-img-bg::before {
+   content: "";
+   display: block;
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-color: rgba(0, 0, 0, 0.5);
+   opacity: 0;
+   transition: 0.5s;
+}
 
+.c2:hover .btn-view,
+.c2:focus .btn-view {
+   opacity: 1;
+   cursor: pointer;
+}
+
+.c2:hover .inspiration-img-bg:before,
+.c2:focus .inspiration-img-bg:before {
+   display: block;
+   opacity: 1;
+   cursor: pointer;
+}
+
+.c2:hover .inspiration-img-bg,
+.c2:focus .inspiration-img-bg {
+   transform: scale(1.2);
+}
+
+.inspiration-img-bg {
+   background-image: url("../img/inspiration.jpg");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   height: 100%;
+   transition: 400ms;
+}
+
+// mouse img ////
+
+.mouse-img-bg::before {
+   content: "";
+   display: block;
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-color: rgba(0, 0, 0, 0.5);
+   opacity: 0;
+   transition: 0.5s;
+}
+
+.d3:hover .btn-view,
+.d3:focus .btn-view {
+   opacity: 1;
+   cursor: pointer;
+}
+
+.d3:hover .mouse-img-bg:before,
+.d3:focus .mouse-img-bg:before {
+   display: block;
+   opacity: 1;
+   cursor: pointer;
+}
+
+.d3:hover .mouse-img-bg,
+.d3:focus .mouse-img-bg {
+   transform: scale(1.2);
+}
+
+.mouse-img-bg {
+   background-image: url("../img/mouse.jpg");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   height: 100%;
+   transition: 400ms;
+}
+
+// sale image ////
+.salesman-img-bg {
+   background-image: url("../img/sale.jpg");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   height: 100%;
+   transition: 400ms;
+}
 
 // rdg image ////
-
-
 .rdg-img-bg::before {
    content: "";
    display: block;
@@ -576,9 +651,8 @@ section {
 
 .c2:hover .btn-view,
 .c2:focus .btn-view {
-  opacity: 1;
-  cursor: pointer;
-
+   opacity: 1;
+   cursor: pointer;
 }
 
 .c2:hover .rdg-img-bg:before,
@@ -602,9 +676,7 @@ section {
    transition: 400ms;
 }
 
-
 // stavros image ////
-
 .stavros-img-bg::before {
    content: "";
    display: block;
@@ -620,9 +692,8 @@ section {
 
 .c3:hover .btn-view,
 .c3:focus .btn-view {
-  opacity: 1;
-  cursor: pointer;
-
+   opacity: 1;
+   cursor: pointer;
 }
 
 .c3:hover .stavros-img-bg:before,
@@ -647,8 +718,6 @@ section {
 }
 
 // stavros mobile image ////
-
-
 .stavros-mobile-img-bg::before {
    content: "";
    display: block;
@@ -664,9 +733,8 @@ section {
 
 .c4:hover .btn-view,
 .c4:focus .btn-view {
-  opacity: 1;
-  cursor: pointer;
-
+   opacity: 1;
+   cursor: pointer;
 }
 
 .c4:hover .stavros-mobile-img-bg:before,
@@ -691,8 +759,6 @@ section {
 }
 
 // gargas image ////
-
-
 .gargas-img-bg::before {
    content: "";
    display: block;
@@ -708,9 +774,8 @@ section {
 
 .c5:hover .btn-view,
 .c5:focus .btn-view {
-  opacity: 1;
-  cursor: pointer;
-
+   opacity: 1;
+   cursor: pointer;
 }
 
 .c5:hover .gargas-img-bg:before,
@@ -736,6 +801,7 @@ section {
 
 ///// About Carousel ////////
 #about {
+   border-top: 10px solid #8f7c4f;
    padding-bottom: 35px;
    min-height: 726px;
 
@@ -1029,37 +1095,37 @@ select:-webkit-autofil {
    border-right: 1px solid #8f7c4f;
 }
 
-
-
 ////// Gallery Modal //////
-
-
 .gallery-modal {
    background-color: #dad6cc;
+
    .modal-header {
       border: none;
-      padding-bottom: 0px;
+      padding-bottom: 0;
+
       .close {
          color: #8f7c4f;
-         opacity: .5;
-         transition: .4s;
+         opacity: 0.5;
+         transition: 0.4s;
          text-shadow: none;
 
          &:hover {
             color: #8f7c4f;
             opacity: 1;
          }
-
       }
+
       .modal-border {
          border: 3px solid #8f7c4f;
          padding: 1rem;
       }
+
       .modal-text {
          font-family: 'Khula', sans-serif;
          color: #8f7c4f;
          font-weight: 700;
          font-size: 20px;
+
          em {
             font-family: 'Raleway', sans-serif;
             font-weight: 400;
@@ -1067,6 +1133,7 @@ select:-webkit-autofil {
             font-style: italic;
             font-size: 19.5px;
          }
+
          span {
             font-family: 'Raleway', sans-serif;
             font-weight: 100;
@@ -1076,22 +1143,27 @@ select:-webkit-autofil {
          }
       }
    }
+
    .modal-body {
-      padding-top: 0px;
-      padding-bottom: 0px;
+      padding-top: 0;
+      padding-bottom: 0;
+
       .modal-border {
          border: 3px solid #8f7c4f;
-         border-top: 0px;
+         border-top: 0;
       }
    }
+
    .modal-footer {
-      padding-top: 0px;
+      padding-top: 0;
       border: none;
+
       .modal-border {
          border: 3px solid #8f7c4f;
-         border-top: 0px;
+         border-top: 0;
          padding: 1rem;
       }
+
       .modal-text-footer {
          font-family: 'Raleway', sans-serif;
          font-weight: 400;
@@ -1100,11 +1172,8 @@ select:-webkit-autofil {
          font-size: 14px !important;
          text-align: left;
       }
-
    }
 }
-
-
 
 ////// SVG ANIMATIONS //////
 .path {
@@ -1121,6 +1190,16 @@ select:-webkit-autofil {
 
 ///// Media Queries ////////
 @media (min-width: 600px) {
+   .d3 {
+      width: 50%;
+      border-top: 10px solid #8f7c4f;
+   }
+
+   .d4 {
+      width: 100%;
+      border-top: 10px solid #8f7c4f;
+   }
+
    .column-fluid-container {
       height: 1200px;
    }
@@ -1143,6 +1222,17 @@ select:-webkit-autofil {
 }
 
 @media (min-width: 768px) {
+   .d3 {
+      width: 50%;
+      border-top: 10px solid #8f7c4f;
+      border-right: 10px solid #8f7c4f;
+   }
+
+   .d4 {
+      width: 50%;
+      border-top: 10px solid #8f7c4f;
+   }
+
    .column-fluid-container {
       width: 100%;
       margin-left: auto;
@@ -1210,7 +1300,6 @@ select:-webkit-autofil {
 }
 
 @media (max-width: 768px) {
-
    .nav-line {
       display: none;
    }
