@@ -5,6 +5,7 @@ $(document).ready(function () {
 });
 
 /// downward scrolling for animated hero button ///
+
 setTimeout(function(){
     $('.trans--grow').addClass('grow');
     $('.nav-item-visibilty').addClass('nav-opacity');
@@ -81,11 +82,18 @@ $(window).resize(function () {
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
-    if (scroll >= 550) {
+    if (scroll >= 450) {
         $(".print-svg").addClass("path");
     } else {
         $(".print-svg").removeClass("path");
     }
+});
+
+//move background hero image with mouse overflow
+$('#landing-content').mousemove(function(e){
+    var amountMovedX = (e.pageX / -1 / 10);
+    var amountMovedY = (e.pageY * -1 / 10);
+    $(this).css('background-position', amountMovedX + 'px ' + amountMovedY + 'px');
 });
 
 
