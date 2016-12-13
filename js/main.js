@@ -89,6 +89,26 @@ $(window).scroll(function() {
     }
 });
 
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 5000) {
+        $(".surf-svg").addClass("path1");
+    } else {
+        $(".surf-svg").removeClass("path1");
+    }
+});
+
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 5000) {
+        $(".wind-svg").addClass("path2");
+    } else {
+        $(".wind-svg").removeClass("path2");
+    }
+});
+
 //move background hero image with mouse overflow
 $('#landing-content').mousemove(function(e){
     var amountMovedX = (e.pageX / -1 / 10);
@@ -100,34 +120,3 @@ $('#landing-content').mousemove(function(e){
 // Add parallax (stellar.js)
 
 $('.jumbotron').stellar();
-
-
-
-// Lightbox
-
-
-$(document).ready(function() {
-    var $lightbox = $('#lightbox');
-
-    $('[data-target="#lightbox"]').on('click', function(event) {
-        var $img = $(this).find('img'),
-            src = $img.attr('src'),
-            alt = $img.attr('alt'),
-            css = {
-                'maxWidth': $(window).width() - 100,
-                'maxHeight': $(window).height() - 100
-            };
-
-        $lightbox.find('.close').addClass('hidden');
-        $lightbox.find('img').attr('src', src);
-        $lightbox.find('img').attr('alt', alt);
-        $lightbox.find('img').css(css);
-    });
-
-    $lightbox.on('shown.bs.modal', function (e) {
-        var $img = $lightbox.find('img');
-
-        $lightbox.find('.modal-dialog').css({'width': $img.width()});
-        $lightbox.find('.close').removeClass('hidden');
-    });
-});
