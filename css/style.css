@@ -251,7 +251,7 @@ h4 {
 .down-arrow {
   position: relative;
   top: 170px;
-  margin-left: calc(50% - 60px);
+  margin-left: calc(50% - 50px);
   z-index: 250;
   opacity: 0.5;
   width: auto;
@@ -924,7 +924,7 @@ section {
 #swell-widget {
   border-top: 10px solid #8f7c4f;
   padding-bottom: 35px;
-  min-height: 726px;
+  min-height: 615px;
 }
 
 #swell-widget h1 {
@@ -966,6 +966,12 @@ section {
   text-transform: uppercase;
   font-size: 1.3rem;
   font-weight: bold;
+  display: flex;
+  flex-direction: row;
+}
+
+#swell-widget .data-container .surf-height .info-box span {
+  padding-left: 10px;
 }
 
 #swell-widget .message-container {
@@ -975,6 +981,10 @@ section {
 
 #swell-widget .message-container .surf-message {
   background-color: #8f7c4f;
+  color: #dad6cc;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
 #contact {
