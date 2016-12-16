@@ -1447,6 +1447,7 @@ select:-webkit-autofil {
   .d1 {
     width: 50%;
     height: 50%;
+    border-right: 10px solid #8f7c4f;
   }
   .d2 {
     width: 50%;
